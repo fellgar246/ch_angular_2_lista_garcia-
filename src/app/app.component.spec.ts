@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'lista-garcia'`, () => {
+  it(`should have as title 'entregable1'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('lista-garcia');
+    expect(app.title).toEqual('entregable1');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('lista-garcia app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('entregable1 app is running!');
   });
 });
