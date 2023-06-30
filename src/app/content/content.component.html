@@ -1,13 +1,21 @@
 <div id="contentContainer">
   <h1>Lista de alumnos</h1>
+  <div class="textContainer">
+    <div id="colorBoxGreen"></div>
+    <p class="textLegend">Alumnos aprobados</p>
+  </div>
+  <div class="textContainer">
+    <div id="colorBoxRed"></div>
+    <p class="textLegend">Alumnos en riesgo</p>
+  </div>
   <div id="itemsContainer">
-    <div id="textContainer">
-      <p id="text">Descubre un mundo de aprendizaje en línea sin límites. En Studio Shodwe, te ofrecemos una plataforma educativa única donde podrás explorar y adquirir conocimientos en una amplia gama de temas, desde desarrollo web hasta fotografía, negocios, diseño gráfico, tecnologías y mucho más.</p>
-      <p id="text">En Studio Shodwe, creemos que el aprendizaje no debe tener barreras. Por eso, hemos diseñado una plataforma intuitiva y fácil de usar que te permite acceder a nuestros cursos desde cualquier lugar y en cualquier momento. Con nuestro enfoque flexible, puedes aprender a tu propio ritmo y adaptar tus horarios de estudio según tus necesidades.</p>
+    <div *ngFor="let alumno of alumnos">
+      <div id="alumnoContainer"  [ngClass]="{ 'destacado': isPromedioAlto(alumno.promedio), 'bajo': isPromedioBajo(alumno.promedio) }">
+        <h3>{{ alumno.nombre }}</h3>
+        <p>Edad: {{ alumno.edad }}</p>
+        <p>Promedio: {{ alumno.promedio | number:'1.1-1' }}</p>
+      </div>
     </div>
-
-    <div id="image"></div>
-
 
   </div>
 </div>

@@ -8,25 +8,55 @@
 #itemsContainer{
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 50px;
 }
 
-#textContainer{
+#alumnoContainer{
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+  border-radius: 15px;
+  padding: 15px 0 0 30px ;
 }
 
-#text{
+.textContainer{
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#colorBoxGreen{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #80ed99;
+}
+#colorBoxRed{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #d90429;
+}
+
+.textLegend{
   width: 400px;
+  font-size: 16px;
+  margin: 0;
 }
 
-#image{
-  width:400px;
-  height:400px;
-  background-image: url('https://res.cloudinary.com/dvvqbwhcc/image/upload/v1687114781/ANGULAR_PROJECT/register_studio_b4cbpp.png');
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+.destacado {
+  background-color: #80ed99;
+  font-weight: bold;
+}
+
+.bajo {
+  background-color: #d90429;
+  font-weight: bold;
 }
